@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#090706" />
+    <title>諸神吹滅篝火｜聚散電台角色心測</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="ambient" aria-hidden="true">
+      <span class="scan-line"></span>
+      <span class="ember ember-a"></span>
+      <span class="ember ember-b"></span>
+      <span class="wave wave-a"></span>
+      <span class="wave wave-b"></span>
+    </div>
+
+    <main class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="brand">好劇好散推理館｜聚散電台</p>
+          <p class="freq">The Truth Frequency</p>
+        </div>
+        <button id="audio-toggle" class="signal-pill" type="button" aria-label="音樂開關">ON AIR</button>
+      </header>
+
+      <section id="loading-screen" class="screen loading-screen is-active" aria-live="polite">
+        <div class="loading-card panel">
+          <span class="eyebrow">ON AIR</span>
+          <h1>訊號接入中</h1>
+          <div class="loading-bar"><span></span></div>
+          <p>篝火頻率掃描中</p>
+        </div>
+      </section>
+
+      <section id="home-screen" class="screen home-screen">
+        <div class="cover-stage">
+          <img class="cover-blur" src="assets/cover.jpg" alt="" aria-hidden="true" />
+          <img class="cover-main" src="assets/cover.jpg" alt="諸神吹滅篝火劇本封面" />
+        </div>
+        <div class="home-copy">
+          <span class="eyebrow">ON AIR</span>
+          <h1>《諸神吹滅篝火》角色心測</h1>
+          <p class="subtitle">聚散電台｜篝火頻率接入中</p>
+          <p class="tagline">—— 今夜，真相屬於你。 ——</p>
+          <button id="start-btn" class="primary-btn" type="button">開始心測</button>
+        </div>
+      </section>
+
+      <section id="gender-screen" class="screen gender-screen">
+        <div class="panel">
+          <span class="eyebrow">SIGNAL RECEIVING</span>
+          <h2>選擇你的接收頻道</h2>
+          <p class="panel-note">女聲與男聲題庫不同，結果也只會在同頻道角色中排序。</p>
+          <div class="channel-grid">
+            <button class="channel-btn" type="button" data-gender="female">
+              <span>女聲頻道</span>
+              <strong>追戮者｜盜火者｜阿六六</strong>
+            </button>
+            <button class="channel-btn" type="button" data-gender="male">
+              <span>男聲頻道</span>
+              <strong>鋼琴家｜不滅者｜小怪獸</strong>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="quiz-screen" class="screen quiz-screen">
+        <div class="quiz-head">
+          <div>
+            <p id="question-kicker" class="kicker">第 01 段訊號</p>
+            <h2 id="quiz-title">請選擇你的篝火頻率</h2>
+          </div>
+          <p id="progress-count" class="progress-count">1 / 13</p>
+        </div>
+        <div class="progress-track" aria-hidden="true"><span id="progress-bar"></span></div>
+
+        <article id="question-card" class="question-card panel">
+          <p class="scan-label">情緒頻率掃描中</p>
+          <h3 id="question-text"></h3>
+          <div id="options-list" class="options-list"></div>
+          <button id="info-next-btn" class="primary-btn info-next" type="button">我知道了，繼續調頻</button>
+        </article>
+
+        <div class="quiz-actions">
+          <button id="prev-btn" class="ghost-btn" type="button">上一題</button>
+        </div>
+      </section>
+
+      <section id="result-screen" class="screen result-screen">
+        <div class="result-hero">
+          <div class="result-image-wrap">
+            <img id="result-blur" class="result-blur" src="" alt="" aria-hidden="true" />
+            <img id="result-image" class="result-image" src="" alt="" />
+          </div>
+          <div class="result-copy">
+            <span class="eyebrow">ON AIR</span>
+            <h2 id="result-name"></h2>
+            <p id="result-score" class="result-score"></p>
+            <p id="tie-note" class="tie-note">雙頻率共振｜你同時接收到兩道最強訊號</p>
+          </div>
+        </div>
+
+        <div id="result-text" class="result-text panel"></div>
+        <div class="ranking panel">
+          <h3>同頻道頻率排行</h3>
+          <div id="ranking-list"></div>
+        </div>
+        <div class="result-actions">
+          <button id="copy-btn" class="primary-btn" type="button">一鍵複製結果</button>
+          <button id="restart-btn" class="ghost-btn" type="button">重新測驗</button>
+        </div>
+        <p id="copy-status" class="copy-status" aria-live="polite"></p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

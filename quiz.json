@@ -1,0 +1,993 @@
+{
+  "quizTitle": "《諸神吹滅篝火》玩家角色心測",
+  "subtitle": "聚散電台｜終末火種頻率接入中",
+  "shareText": "我在聚散電台測到了《諸神吹滅篝火》的「{{roleName}}」\n匹配度：{{percentage}}%\n\n我的情緒頻率已接入《諸神吹滅篝火》。\n你的頻率會接收到誰？\n\n好劇好散推理館｜The Truth Frequency\n—— 今夜，真相屬於你。 ——",
+  "brandText": {
+    "brandName": "好劇好散推理館",
+    "radioName": "聚散電台",
+    "english": "The Truth Frequency",
+    "slogan": "—— 今夜，真相屬於你。 ——",
+    "onAir": "ON AIR"
+  },
+  "percentageRule": {
+    "name": "頻率共振值",
+    "formula": "rawScore / maxScore * 100%",
+    "rounding": "四捨五入為整數",
+    "allowsNegative": true,
+    "allowsOver100": true,
+    "sort": "依頻率共振值由高到低排序",
+    "tie": "若最高分平手，顯示「雙頻率共振」提示",
+    "notRatioSum": "不是占比型百分比，不要求全部角色加總為 100%"
+  },
+  "roles": [
+    {
+      "roleId": "zhuiluzhe",
+      "roleName": "追戮者",
+      "gender": "female",
+      "coverImage": "assets/zhuiluzhe.jpg",
+      "resultText": "你接收到的是「追戮者」的頻率。\n你看似冷冽決絕，其實把每一次心軟都藏進了沉默裡。\n你習慣用判斷、距離與行動面對世界，卻總在有人需要被接住時露出真正的自己。\n若故事重新開始，你也許仍會站在風聲最急的地方，替自己相信的事扣下選擇。",
+      "maxScore": 30,
+      "minScore": -2
+    },
+    {
+      "roleId": "daohuozhe",
+      "roleName": "盜火者",
+      "gender": "female",
+      "coverImage": "assets/daohuozhe.jpg",
+      "resultText": "你接收到的是「盜火者」的頻率。\n你看似理性清醒，其實心裡一直留著一束不肯熄滅的火。\n你習慣用推演、堅持與代價面對世界，卻總在文明快要失聲時露出真正的自己。\n若故事重新開始，你也許仍會伸手去偷那一點光，哪怕指尖先被灼傷。",
+      "maxScore": 31,
+      "minScore": 0
+    },
+    {
+      "roleId": "aliuliu",
+      "roleName": "阿六六",
+      "gender": "female",
+      "coverImage": "assets/aliuliu.jpg",
+      "resultText": "你接收到的是「阿六六」的頻率。\n你看似柔軟愛笑，其實比誰都更懂得告別的重量。\n你習慣用陪伴、記得與等待面對世界，卻總在害怕失去時露出真正的自己。\n若故事重新開始，你也許仍會把那些微小的光收好，再一次走向想見的人。",
+      "maxScore": 30,
+      "minScore": -1
+    },
+    {
+      "roleId": "gangqinjia",
+      "roleName": "鋼琴家",
+      "gender": "male",
+      "coverImage": "assets/gangqinjia.jpg",
+      "resultText": "你接收到的是「鋼琴家」的頻率。\n你看似沉穩克制，其實心裡一直有一段為眾人而奏的旋律。\n你習慣用責任、秩序與長遠目光面對世界，卻總在需要有人守住篝火時露出真正的自己。\n若故事重新開始，你也許仍會坐到那架琴前，把沉默彈成所有人的回聲。",
+      "maxScore": 33,
+      "minScore": -1
+    },
+    {
+      "roleId": "bumiezhe",
+      "roleName": "不滅者",
+      "gender": "male",
+      "coverImage": "assets/bumiezhe.jpg",
+      "resultText": "你接收到的是「不滅者」的頻率。\n你看似隨性灑脫，其實一直在替生命尋找一個不能被熄滅的理由。\n你習慣用玩笑、遠行與不服輸面對世界，卻總在命運逼近時露出真正的自己。\n若故事重新開始，你也許仍會越過廢墟，去確認那束曙光是否還在。",
+      "maxScore": 31,
+      "minScore": 2
+    },
+    {
+      "roleId": "xiaoguaishou",
+      "roleName": "小怪獸",
+      "gender": "male",
+      "coverImage": "assets/xiaoguaishou.jpg",
+      "resultText": "你接收到的是「小怪獸」的頻率。\n你看似安靜內斂，其實心裡一直追著一束很亮的光。\n你習慣用忍耐、記憶與靠近面對世界，卻總在有人願意喊你回家時露出真正的自己。\n若故事重新開始，你也許仍會伸手接住那條小魚，因為牠在乎。",
+      "maxScore": 35,
+      "minScore": -2
+    }
+  ],
+  "questions": [
+    {
+      "id": "F1",
+      "gender": "female",
+      "type": "single",
+      "scored": true,
+      "text": "想要體驗什麼樣的愛情頻率？",
+      "requiresPrivateMessage": false,
+      "options": [
+        {
+          "id": "A",
+          "text": "富含詩意的浪漫幻想。",
+          "score": {
+            "daohuozhe": 3
+          }
+        },
+        {
+          "id": "B",
+          "text": "超脫凡塵的相互救贖。",
+          "score": {
+            "aliuliu": 3
+          }
+        },
+        {
+          "id": "C",
+          "text": "宿命交織的命中注定。",
+          "score": {
+            "zhuiluzhe": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "F2",
+      "gender": "female",
+      "type": "single",
+      "scored": true,
+      "text": "以下哪一組特質更貼近你？",
+      "requiresPrivateMessage": false,
+      "options": [
+        {
+          "id": "A",
+          "text": "特立獨行，外剛內柔。",
+          "score": {
+            "zhuiluzhe": 3
+          }
+        },
+        {
+          "id": "B",
+          "text": "鍥而不捨，膽大心細。",
+          "score": {
+            "daohuozhe": 3
+          }
+        },
+        {
+          "id": "C",
+          "text": "活潑堅強，外柔內剛。",
+          "score": {
+            "aliuliu": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "F3",
+      "gender": "female",
+      "type": "single",
+      "scored": true,
+      "text": "劇本中的文字風格，你更喜歡哪一種？",
+      "requiresPrivateMessage": false,
+      "options": [
+        {
+          "id": "A",
+          "text": "意識流，藝術高端。",
+          "score": {
+            "daohuozhe": 3
+          }
+        },
+        {
+          "id": "B",
+          "text": "貼近現實，細膩入心。",
+          "score": {
+            "zhuiluzhe": 3
+          }
+        },
+        {
+          "id": "C",
+          "text": "飽含深意，回味無窮。",
+          "score": {
+            "aliuliu": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "F4",
+      "gender": "female",
+      "type": "single",
+      "scored": true,
+      "text": "如果只能先接收一段情感訊號，你會把哪一段放在最前面？",
+      "requiresPrivateMessage": false,
+      "options": [
+        {
+          "id": "A",
+          "text": "事業與使命：想看見一個人如何站穩自己的位置。",
+          "score": {
+            "zhuiluzhe": 3,
+            "daohuozhe": 1,
+            "aliuliu": 1
+          }
+        },
+        {
+          "id": "B",
+          "text": "愛人：想體驗在終末世界裡仍然相互選擇。",
+          "score": {
+            "daohuozhe": 2,
+            "zhuiluzhe": 2,
+            "aliuliu": 2
+          }
+        },
+        {
+          "id": "C",
+          "text": "父親或家庭：想被笨拙或堅定的親情擊中。",
+          "score": {
+            "zhuiluzhe": 2,
+            "daohuozhe": 2
+          }
+        },
+        {
+          "id": "D",
+          "text": "哥哥姐姐般的牽掛：想接收手足與陪伴。",
+          "score": {
+            "aliuliu": 3,
+            "zhuiluzhe": 1
+          }
+        },
+        {
+          "id": "E",
+          "text": "家國與文明：想看見一個人如何把自己交給更大的火。",
+          "score": {
+            "zhuiluzhe": 2,
+            "daohuozhe": 2,
+            "aliuliu": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "F5",
+      "gender": "female",
+      "type": "single",
+      "scored": true,
+      "text": "劇本體驗中，對於父愛你會更偏好哪一種？",
+      "requiresPrivateMessage": false,
+      "options": [
+        {
+          "id": "A",
+          "text": "貼近現實，拙劣而不善表達。",
+          "score": {
+            "zhuiluzhe": 3
+          }
+        },
+        {
+          "id": "B",
+          "text": "無條件的偏袒與愛護。",
+          "score": {
+            "daohuozhe": 3
+          }
+        },
+        {
+          "id": "C",
+          "text": "都可以，只要情緒真誠就好。",
+          "score": {
+            "zhuiluzhe": 1,
+            "daohuozhe": 1,
+            "aliuliu": 1
+          }
+        },
+        {
+          "id": "D",
+          "text": "不太吃父親線，其他情感更容易打動我。",
+          "score": {
+            "aliuliu": 1,
+            "zhuiluzhe": -1,
+            "daohuozhe": -1
+          }
+        }
+      ]
+    },
+    {
+      "id": "F6",
+      "gender": "female",
+      "type": "single",
+      "scored": true,
+      "text": "在情感中，你偏向於想體驗付出，還是被付出？",
+      "requiresPrivateMessage": false,
+      "options": [
+        {
+          "id": "A",
+          "text": "付出。",
+          "score": {
+            "daohuozhe": 3
+          }
+        },
+        {
+          "id": "B",
+          "text": "被付出。",
+          "score": {
+            "aliuliu": 2,
+            "zhuiluzhe": 2
+          }
+        },
+        {
+          "id": "C",
+          "text": "互相付出。",
+          "score": {
+            "daohuozhe": 2,
+            "aliuliu": 1,
+            "zhuiluzhe": 1
+          }
+        },
+        {
+          "id": "D",
+          "text": "都可以，重點是情感足夠成立。",
+          "score": {
+            "daohuozhe": 1,
+            "aliuliu": 1,
+            "zhuiluzhe": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "F7",
+      "gender": "female",
+      "type": "single",
+      "scored": true,
+      "text": "在沙灘的淺水窪裡，有成千上萬條被捲上岸的小魚。有的小魚已經死了，有的小魚還在掙扎。你會怎麼做？",
+      "requiresPrivateMessage": false,
+      "options": [
+        {
+          "id": "A",
+          "text": "自己能救多少是多少，因為這條小魚在乎。",
+          "score": {
+            "zhuiluzhe": 2,
+            "aliuliu": 1
+          }
+        },
+        {
+          "id": "B",
+          "text": "這些都是小魚的命運，遵循大自然的法則。",
+          "score": {
+            "aliuliu": 1,
+            "zhuiluzhe": -1
+          }
+        },
+        {
+          "id": "C",
+          "text": "結合目前情況高效施救；若救不了，就想辦法預防再次發生。",
+          "score": {
+            "daohuozhe": 2,
+            "zhuiluzhe": 1,
+            "aliuliu": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "F8",
+      "gender": "female",
+      "type": "single",
+      "scored": true,
+      "text": "如果可以拯救世界，你的想法更接近哪一種？",
+      "requiresPrivateMessage": false,
+      "options": [
+        {
+          "id": "A",
+          "text": "我並不太在意這個世界，只是因為有我愛的人存在，我愛的人在意，那我便願意一試。",
+          "score": {
+            "aliuliu": 3
+          }
+        },
+        {
+          "id": "B",
+          "text": "如果這個世界注定會被毀滅，那就請先毀滅我，或是讓我去毀滅那個所謂的注定。",
+          "score": {
+            "zhuiluzhe": 3
+          }
+        },
+        {
+          "id": "C",
+          "text": "我願為人類之延續拼盡全力，無論付出怎樣的代價。",
+          "score": {
+            "daohuozhe": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "F9",
+      "gender": "female",
+      "type": "single",
+      "scored": true,
+      "text": "你認為自己是否害怕孤獨？",
+      "requiresPrivateMessage": false,
+      "options": [
+        {
+          "id": "A",
+          "text": "0-3 分：我更享受孤獨。",
+          "score": {
+            "zhuiluzhe": 2,
+            "daohuozhe": 1,
+            "aliuliu": -1
+          }
+        },
+        {
+          "id": "B",
+          "text": "4-6 分：不害怕，也不特別喜歡。",
+          "score": {
+            "daohuozhe": 2,
+            "zhuiluzhe": 1,
+            "aliuliu": 1
+          }
+        },
+        {
+          "id": "C",
+          "text": "7-8 分：我會害怕，但還能撐住。",
+          "score": {
+            "aliuliu": 2,
+            "daohuozhe": 1
+          }
+        },
+        {
+          "id": "D",
+          "text": "9-10 分：我很害怕孤獨。",
+          "score": {
+            "aliuliu": 3,
+            "daohuozhe": 1,
+            "zhuiluzhe": -1
+          }
+        }
+      ]
+    },
+    {
+      "id": "F10",
+      "gender": "female",
+      "type": "single",
+      "scored": true,
+      "text": "你的日常能量更接近哪一種？",
+      "requiresPrivateMessage": false,
+      "options": [
+        {
+          "id": "A",
+          "text": "E 人：我會主動靠近人群與熱鬧。",
+          "score": {
+            "aliuliu": 2
+          }
+        },
+        {
+          "id": "B",
+          "text": "I 人：我更習慣先觀察，再把情緒留在心裡。",
+          "score": {
+            "zhuiluzhe": 1,
+            "daohuozhe": 1,
+            "aliuliu": -1
+          }
+        },
+        {
+          "id": "C",
+          "text": "看狀況：熟的人面前很外向，不熟時安靜。",
+          "score": {
+            "aliuliu": 1,
+            "daohuozhe": 1,
+            "zhuiluzhe": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "F11",
+      "gender": "female",
+      "type": "info",
+      "scored": false,
+      "text": "如果你有特殊雷點或不適內容顧慮，請先私訊聚散電台，我們會協助你確認是否適合上車。",
+      "requiresPrivateMessage": true,
+      "score": {},
+      "buttonText": "我知道了，繼續調頻",
+      "options": []
+    },
+    {
+      "id": "F12",
+      "gender": "female",
+      "type": "single",
+      "scored": true,
+      "text": "聚散電台收到一段終末訊號，你最想先修復哪一段？",
+      "requiresPrivateMessage": false,
+      "options": [
+        {
+          "id": "A",
+          "text": "一段關於命運與選擇的雜訊。",
+          "score": {
+            "zhuiluzhe": 3
+          }
+        },
+        {
+          "id": "B",
+          "text": "一段關於文明火種的斷音。",
+          "score": {
+            "daohuozhe": 3
+          }
+        },
+        {
+          "id": "C",
+          "text": "一段關於回憶與告別的低語。",
+          "score": {
+            "aliuliu": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "F13",
+      "gender": "female",
+      "type": "single",
+      "scored": true,
+      "text": "當篝火快要熄滅，你會把最後一點溫度留給什麼？",
+      "requiresPrivateMessage": false,
+      "options": [
+        {
+          "id": "A",
+          "text": "留給必須完成的事，哪怕沒有人理解。",
+          "score": {
+            "zhuiluzhe": 2,
+            "daohuozhe": 1
+          }
+        },
+        {
+          "id": "B",
+          "text": "留給仍相信未來的人類。",
+          "score": {
+            "daohuozhe": 3
+          }
+        },
+        {
+          "id": "C",
+          "text": "留給那些還在等我回應的人。",
+          "score": {
+            "aliuliu": 3
+          }
+        },
+        {
+          "id": "D",
+          "text": "我會先哭一會兒，再決定把它交給誰。",
+          "score": {
+            "aliuliu": 2,
+            "zhuiluzhe": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "M1",
+      "gender": "male",
+      "type": "single",
+      "scored": true,
+      "text": "想要體驗什麼樣的愛情頻率？",
+      "requiresPrivateMessage": false,
+      "options": [
+        {
+          "id": "A",
+          "text": "各自絢爛的彼此寄託。",
+          "score": {
+            "gangqinjia": 3
+          }
+        },
+        {
+          "id": "B",
+          "text": "超脫凡塵的相互救贖。",
+          "score": {
+            "xiaoguaishou": 3
+          }
+        },
+        {
+          "id": "C",
+          "text": "宿命交織的命中注定。",
+          "score": {
+            "bumiezhe": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "M2",
+      "gender": "male",
+      "type": "single",
+      "scored": true,
+      "text": "以下哪一組特質更貼近你？",
+      "requiresPrivateMessage": false,
+      "options": [
+        {
+          "id": "A",
+          "text": "沉穩堅定，頑強不屈。",
+          "score": {
+            "gangqinjia": 3
+          }
+        },
+        {
+          "id": "B",
+          "text": "隨性灑脫，找尋意義。",
+          "score": {
+            "bumiezhe": 3
+          }
+        },
+        {
+          "id": "C",
+          "text": "寡言內斂，渴望光明。",
+          "score": {
+            "xiaoguaishou": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "M3",
+      "gender": "male",
+      "type": "single",
+      "scored": true,
+      "text": "劇本中的文字風格，你更喜歡哪一種？",
+      "requiresPrivateMessage": false,
+      "options": [
+        {
+          "id": "A",
+          "text": "意識流，藝術高端。",
+          "score": {
+            "bumiezhe": 3
+          }
+        },
+        {
+          "id": "B",
+          "text": "貼近現實，細膩入心。",
+          "score": {
+            "gangqinjia": 3
+          }
+        },
+        {
+          "id": "C",
+          "text": "飽含深意，回味無窮。",
+          "score": {
+            "xiaoguaishou": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "M4",
+      "gender": "male",
+      "type": "single",
+      "scored": true,
+      "text": "如果只能先接收一段情感訊號，你會把哪一段放在最前面？",
+      "requiresPrivateMessage": false,
+      "options": [
+        {
+          "id": "A",
+          "text": "家國與父親：想看見一個人如何把責任扛起來。",
+          "score": {
+            "gangqinjia": 3,
+            "xiaoguaishou": 1
+          }
+        },
+        {
+          "id": "B",
+          "text": "愛人：想看見彼此如何成為支點。",
+          "score": {
+            "bumiezhe": 3,
+            "gangqinjia": 1,
+            "xiaoguaishou": 1
+          }
+        },
+        {
+          "id": "C",
+          "text": "姐姐或家人：想接收被牽掛、被照亮的頻率。",
+          "score": {
+            "xiaoguaishou": 3,
+            "bumiezhe": 1
+          }
+        },
+        {
+          "id": "D",
+          "text": "群像與朋友：想和許多人一起守住一束火。",
+          "score": {
+            "gangqinjia": 2,
+            "bumiezhe": 2
+          }
+        },
+        {
+          "id": "E",
+          "text": "寵物與微小日常：越小的溫暖越能擊中我。",
+          "score": {
+            "xiaoguaishou": 2,
+            "bumiezhe": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "M5",
+      "gender": "male",
+      "type": "single",
+      "scored": true,
+      "text": "在情感中，你偏向於想體驗付出，還是被付出？",
+      "requiresPrivateMessage": false,
+      "options": [
+        {
+          "id": "A",
+          "text": "付出。",
+          "score": {
+            "bumiezhe": 2,
+            "gangqinjia": 2
+          }
+        },
+        {
+          "id": "B",
+          "text": "被付出。",
+          "score": {
+            "xiaoguaishou": 3
+          }
+        },
+        {
+          "id": "C",
+          "text": "彼此付出。",
+          "score": {
+            "gangqinjia": 2,
+            "bumiezhe": 2,
+            "xiaoguaishou": 2
+          }
+        },
+        {
+          "id": "D",
+          "text": "都可以，重點是情感足夠成立。",
+          "score": {
+            "gangqinjia": 1,
+            "bumiezhe": 1,
+            "xiaoguaishou": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "M6",
+      "gender": "male",
+      "type": "single",
+      "scored": true,
+      "text": "對於英雄主義，你的看法更貼近以下哪一條？",
+      "requiresPrivateMessage": false,
+      "options": [
+        {
+          "id": "A",
+          "text": "明知不可為而為之，雖千萬人吾往矣。",
+          "score": {
+            "xiaoguaishou": 3
+          }
+        },
+        {
+          "id": "B",
+          "text": "真正的英雄主義不只是少數英豪，而是每個人集體意識的凝結。",
+          "score": {
+            "gangqinjia": 3
+          }
+        },
+        {
+          "id": "C",
+          "text": "認清生活的真相後，依然熱愛它。",
+          "score": {
+            "bumiezhe": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "M7",
+      "gender": "male",
+      "type": "single",
+      "scored": true,
+      "text": "在沙灘的淺水窪裡，有成千上萬條被捲上岸的小魚。有的小魚已經死了，有的小魚還在掙扎。你會怎麼做？",
+      "requiresPrivateMessage": false,
+      "options": [
+        {
+          "id": "A",
+          "text": "自己能救多少是多少，因為這條小魚在乎。",
+          "score": {
+            "xiaoguaishou": 3,
+            "bumiezhe": 1
+          }
+        },
+        {
+          "id": "B",
+          "text": "這些都是小魚的命運，遵循大自然的法則。",
+          "score": {
+            "bumiezhe": 1,
+            "xiaoguaishou": -1
+          }
+        },
+        {
+          "id": "C",
+          "text": "結合目前情況高效施救；若救不了，就想辦法預防再次發生。",
+          "score": {
+            "gangqinjia": 3,
+            "bumiezhe": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "M8",
+      "gender": "male",
+      "type": "single",
+      "scored": true,
+      "text": "如果可以拯救世界，你的想法更接近哪一種？",
+      "requiresPrivateMessage": false,
+      "options": [
+        {
+          "id": "A",
+          "text": "我並不太在意這個世界，只是因為有我愛的人存在，我愛的人在意，那我便願意一試。",
+          "score": {
+            "xiaoguaishou": 3
+          }
+        },
+        {
+          "id": "B",
+          "text": "如果這個世界注定會被毀滅，那就請先毀滅我，或是讓我去毀滅那個所謂的注定。",
+          "score": {
+            "bumiezhe": 3
+          }
+        },
+        {
+          "id": "C",
+          "text": "我願為人類之延續拼盡全力，無論付出怎樣的代價。",
+          "score": {
+            "gangqinjia": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "M9",
+      "gender": "male",
+      "type": "single",
+      "scored": true,
+      "text": "你認為自己是否害怕孤獨？",
+      "requiresPrivateMessage": false,
+      "options": [
+        {
+          "id": "A",
+          "text": "0-3 分：我更享受孤獨。",
+          "score": {
+            "gangqinjia": 2,
+            "bumiezhe": 1,
+            "xiaoguaishou": -1
+          }
+        },
+        {
+          "id": "B",
+          "text": "4-6 分：不害怕，也不特別喜歡。",
+          "score": {
+            "bumiezhe": 2,
+            "gangqinjia": 1,
+            "xiaoguaishou": 1
+          }
+        },
+        {
+          "id": "C",
+          "text": "7-8 分：我會害怕，但還能撐住。",
+          "score": {
+            "xiaoguaishou": 2,
+            "bumiezhe": 1
+          }
+        },
+        {
+          "id": "D",
+          "text": "9-10 分：我很害怕孤獨。",
+          "score": {
+            "xiaoguaishou": 3,
+            "bumiezhe": 1,
+            "gangqinjia": -1
+          }
+        }
+      ]
+    },
+    {
+      "id": "M10",
+      "gender": "male",
+      "type": "single",
+      "scored": true,
+      "text": "你的日常能量更接近哪一種？",
+      "requiresPrivateMessage": false,
+      "options": [
+        {
+          "id": "A",
+          "text": "E 人：我會主動靠近人群與熱鬧。",
+          "score": {
+            "bumiezhe": 2,
+            "gangqinjia": 2
+          }
+        },
+        {
+          "id": "B",
+          "text": "I 人：我更習慣先觀察，再把情緒留在心裡。",
+          "score": {
+            "xiaoguaishou": 2
+          }
+        },
+        {
+          "id": "C",
+          "text": "看狀況：熟的人面前很外向，不熟時安靜。",
+          "score": {
+            "gangqinjia": 1,
+            "bumiezhe": 1,
+            "xiaoguaishou": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "M11",
+      "gender": "male",
+      "type": "single",
+      "scored": true,
+      "text": "聚散電台收到一段終末訊號，你最想先修復哪一段？",
+      "requiresPrivateMessage": false,
+      "options": [
+        {
+          "id": "A",
+          "text": "一段屬於眾人的合奏。",
+          "score": {
+            "gangqinjia": 3
+          }
+        },
+        {
+          "id": "B",
+          "text": "一段認清荒涼後仍然熱愛的回音。",
+          "score": {
+            "bumiezhe": 3
+          }
+        },
+        {
+          "id": "C",
+          "text": "一段關於回家、光和小小幸福的聲音。",
+          "score": {
+            "xiaoguaishou": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "M12",
+      "gender": "male",
+      "type": "single",
+      "scored": true,
+      "text": "當篝火快要熄滅，你會怎麼守住它？",
+      "requiresPrivateMessage": false,
+      "options": [
+        {
+          "id": "A",
+          "text": "讓更多人一起伸手，火才不會只是某個人的責任。",
+          "score": {
+            "gangqinjia": 3
+          }
+        },
+        {
+          "id": "B",
+          "text": "先笑一笑，再把火帶去下一個地方。",
+          "score": {
+            "bumiezhe": 3
+          }
+        },
+        {
+          "id": "C",
+          "text": "就算只剩一點點，我也想先照亮身邊的人。",
+          "score": {
+            "xiaoguaishou": 3
+          }
+        },
+        {
+          "id": "D",
+          "text": "我不確定能不能守住，但我會試到最後。",
+          "score": {
+            "xiaoguaishou": 2,
+            "bumiezhe": 1,
+            "gangqinjia": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "M13",
+      "gender": "male",
+      "type": "info",
+      "scored": false,
+      "text": "如果你有特殊雷點或不適內容顧慮，請先私訊聚散電台，我們會協助你確認是否適合上車。",
+      "requiresPrivateMessage": true,
+      "score": {},
+      "buttonText": "我知道了，繼續調頻",
+      "options": []
+    }
+  ],
+  "music": {
+    "enabled": true,
+    "mode": "background",
+    "source": "assets/bgm.mp3"
+  },
+  "siteAssets": {
+    "coverImage": "assets/cover.jpg",
+    "audio": "assets/bgm.mp3",
+    "audioMode": "background"
+  }
+}
